@@ -34,9 +34,9 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+   # 'django.contrib.sessions',
+   # 'django.contrib.messages',
+   # 'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -73,10 +73,20 @@ WSGI_APPLICATION = 'NetDisk.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'netdisk',
+        'USER': 'u1',
+        'PASSWORD': 'zaq12wsde',
+        'HOST': 'v7.cxy2.com',
+        'PORT': '3306',
     }
 }
 
@@ -105,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
